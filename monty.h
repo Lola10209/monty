@@ -8,8 +8,8 @@
 #define STACK 1
 #define QUEUE 0
 #define DELIM " \n\t\r\a\b"
+#define FAILURE -1
 
-extern char *toks_num;
 
 /**
  * struct stack_s - doubly linked list representation of a stack (or queue)
@@ -41,13 +41,28 @@ typedef struct instruction_s
 	void (*f)(stack_t **stack, unsigned int line_number);
 } instruction_t;
 
+/**
+ * struct global_s - global struct for monty variable
+ * @err_status: error status to hold error term
+ * @toks_num: number tokenized from the line read
+ */
+typedef struct global_s
+{
+	int err_status;
+	char *toks_num;
+} global_t;
 
-
+extern global_t global;
 
 int exec_monty(FILE *);
+void (*get_op_func(char *ops))(stack_t **, unsigned int);
 stack_t *stack_init(void);
+int check_mode(stack_t *);
 
 
+int is_digit(char *);
+int stack_size(stack_t *);
+stack_t *add_new_node(int);
 
 
 void push(stack_t **stack, unsigned int line_number);
@@ -67,5 +82,12 @@ void rotl(stack_t **stack, unsigned int line_number);
 void rotr(stack_t **stack, unsigned int line_number);
 void stack(stack_t **stack, unsigned int line_number);
 void queue(stack_t **stack, unsigned int line_number);
+
+
+
+void free_stack(stack_t **stack);
+
+
+
 
 #endif /* __MONTY_H__ */
