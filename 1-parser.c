@@ -114,8 +114,8 @@ int exec_monty(FILE *line_fd)
  * of a stack_t linked list.
  *
  * Return: if the stack_t is in stack mode - STACK (1).
- * 	   if the stack_t is in queue mode - QUEUE (0).
- * 	   Otherwise -2.
+ * if the stack_t is in queue mode - QUEUE (0).
+ * Otherwise -2.
  */
 int check_mode(stack_t *stack)
 {
