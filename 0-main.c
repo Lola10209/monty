@@ -1,7 +1,6 @@
 #include "monty.h"
 
-
-global_t global = {EXIT_SUCCESS, NULL};
+global = {EXIT_SUCCESS, NULL};
 
 /**
  * main - starting point monty interpreter
