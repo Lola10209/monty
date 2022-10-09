@@ -47,11 +47,11 @@ void pstr_handler(stack_t **stack, unsigned int line_number)
 
 
 /**
- * rotl_handler - Rotates the top value of a stack_t linked list to the bottom.
+ * rotr_handler - Rotates the bottom value of a stack_t linked list to the bottom.
  * @stack: A pointer to the top mode node of a stack_t linked list.
  * @liner_number: The current working line number of a Monty bytecodes file.
  */
-void rotl_handler(stack_t **stack, unsigned int line_number)
+void rotr_handler(stack_t **stack, unsigned int line_number)
 {
 	stack_t *top, *bottom;
 
