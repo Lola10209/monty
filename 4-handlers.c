@@ -37,7 +37,7 @@ void div_handler(stack_t **stack, unsigned int line_no)
  * @line_no: the line in which this command is called
  * Return: nothing
  */
-void mul_handler(stack_t **stack, unsignedint line_no)
+void mul_handler(stack_t **stack, unsigned int line_no)
 {
 	int size = stack_size((*stack)_>next);
 
