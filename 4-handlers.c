@@ -39,7 +39,7 @@ void div_handler(stack_t **stack, unsigned int line_no)
  */
 void mul_handler(stack_t **stack, unsigned int line_no)
 {
-	int size = stack_size((*stack)_>next);
+	int size = stack_size((*stack)->next);
 
 	if (size < 2)
 	{
